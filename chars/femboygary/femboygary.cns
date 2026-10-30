@@ -1,0 +1,611 @@
+[Data]
+life = 1000
+power = 3000
+attack = 100
+defence = 100
+fall.defence_up = 50
+liedown.time = 60
+airjuggle = 15
+sparkno = 2
+guard.sparkno = 40
+KO.echo = 0
+volume = 0
+IntPersistIndex = 60
+FloatPersistIndex = 40
+[Size]
+xscale = .55
+yscale = .55
+ground.back = 42
+ground.front = 48
+air.back = 35
+air.front = 40
+height = 100
+attack.dist = 100
+proj.attack.dist = 90
+proj.doscale = 1
+head.pos = 25,-90
+mid.pos = 0,-45
+shadowoffset = 0
+draw.offset = 0,0
+[Velocity]
+walk.fwd = 2.2
+walk.back = -1.7
+run.fwd = 5.5,0
+run.back = -4,-3
+jump.neu = 0,-8.5
+jump.back = -2.8
+jump.fwd = 3.2
+runjump.back = -3,-8.5
+runjump.fwd = 4.5,-8.5
+airjump.neu = 0,-8
+airjump.back = -3
+airjump.fwd = 3
+[Movement]
+airjump.num = 1
+airjump.height = 35
+yaccel = .44
+stand.friction = .82
+crouch.friction = .82
+stand.friction.threshold = .05
+crouch.friction.threshold = .05
+air.gethit.groundlevel = 25
+air.gethit.groundrecover.ground.threshold = -20
+air.gethit.groundrecover.groundlevel = 10
+air.gethit.airrecover.threshold = -1
+air.gethit.airrecover.yaccel = .35
+air.gethit.trip.groundlevel = 15
+down.bounce.offset = 0,20
+down.bounce.yaccel = .4
+down.bounce.groundlevel = 12
+down.friction.threshold = .05
+
+[Statedef 200]
+type = S
+movetype = A
+physics = S
+anim = 200
+ctrl = 0
+poweradd = 25
+[State 200, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 0
+[State 200, hit]
+type = HitDef
+trigger1 = Time = 5
+attr = S, NA
+hitflag = MAF
+ guardflag = MA
+animtype = Light
+damage = 35,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = High
+ground.slidetime = 12
+ground.hittime = 18
+ground.velocity = -3, 0
+air.velocity = -3,-4
+fall = 0
+getpower = 35,10
+givepower = 20,10
+[State 200, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+[Statedef 210]
+type = S
+movetype = A
+physics = S
+anim = 210
+ctrl = 0
+poweradd = 25
+[State 210, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 0.8
+[State 210, hit]
+type = HitDef
+trigger1 = Time = 5
+attr = S, NA
+hitflag = MAF
+ guardflag = MA
+animtype = Light
+damage = 65,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = High
+ground.slidetime = 12
+ground.hittime = 18
+ground.velocity = -3, 0
+air.velocity = -3,-4
+fall = 0
+getpower = 35,10
+givepower = 20,10
+[State 210, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+[Statedef 220]
+type = S
+movetype = A
+physics = S
+anim = 220
+ctrl = 0
+poweradd = 25
+[State 220, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 1.5
+[State 220, hit]
+type = HitDef
+trigger1 = Time = 5
+attr = S, NA
+hitflag = MAF
+ guardflag = MA
+animtype = Hard
+damage = 95,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = High
+ground.slidetime = 12
+ground.hittime = 24
+ground.velocity = -5, 0
+air.velocity = -3,-4
+fall = 0
+getpower = 35,10
+givepower = 20,10
+[State 220, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+[Statedef 400]
+type = C
+movetype = A
+physics = C
+anim = 400
+ctrl = 0
+poweradd = 25
+[State 400, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 0
+[State 400, hit]
+type = HitDef
+trigger1 = Time = 5
+attr = C, NA
+hitflag = MAF
+ guardflag = MA
+animtype = Light
+damage = 35,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = High
+ground.slidetime = 12
+ground.hittime = 18
+ground.velocity = -3, 0
+air.velocity = -3,-4
+fall = 0
+getpower = 35,10
+givepower = 20,10
+[State 400, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 11
+ctrl = 1
+
+
+[Statedef 410]
+type = C
+movetype = A
+physics = C
+anim = 410
+ctrl = 0
+poweradd = 25
+[State 410, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 0.8
+[State 410, hit]
+type = HitDef
+trigger1 = Time = 5
+attr = C, NA
+hitflag = MAF
+ guardflag = MA
+animtype = Light
+damage = 65,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = High
+ground.slidetime = 12
+ground.hittime = 18
+ground.velocity = -3, 0
+air.velocity = -3,-4
+fall = 0
+getpower = 35,10
+givepower = 20,10
+[State 410, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 11
+ctrl = 1
+
+
+[Statedef 420]
+type = C
+movetype = A
+physics = C
+anim = 420
+ctrl = 0
+poweradd = 25
+[State 420, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 1.5
+[State 420, hit]
+type = HitDef
+trigger1 = Time = 5
+attr = C, NA
+hitflag = MAF
+ guardflag = L
+animtype = Hard
+damage = 95,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = Trip
+ground.slidetime = 12
+ground.hittime = 24
+ground.velocity = -5, -5
+air.velocity = -3,-4
+fall = 1
+getpower = 35,10
+givepower = 20,10
+[State 420, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 11
+ctrl = 1
+
+
+[Statedef 600]
+type = A
+movetype = A
+physics = A
+anim = 600
+ctrl = 0
+poweradd = 25
+[State 600, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 0
+[State 600, hit]
+type = HitDef
+trigger1 = Time = 5
+attr = A, NA
+hitflag = MAF
+ guardflag = H
+animtype = Light
+damage = 35,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = High
+ground.slidetime = 12
+ground.hittime = 18
+ground.velocity = -3, 0
+air.velocity = -3,-4
+fall = 0
+getpower = 35,10
+givepower = 20,10
+[State 600, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 50
+ctrl = 1
+
+
+[Statedef 610]
+type = A
+movetype = A
+physics = A
+anim = 610
+ctrl = 0
+poweradd = 25
+[State 610, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 0.8
+[State 610, hit]
+type = HitDef
+trigger1 = Time = 5
+attr = A, NA
+hitflag = MAF
+ guardflag = H
+animtype = Light
+damage = 65,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = High
+ground.slidetime = 12
+ground.hittime = 18
+ground.velocity = -3, 0
+air.velocity = -3,-4
+fall = 0
+getpower = 35,10
+givepower = 20,10
+[State 610, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 50
+ctrl = 1
+
+
+[Statedef 620]
+type = A
+movetype = A
+physics = A
+anim = 620
+ctrl = 0
+poweradd = 25
+[State 620, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 1.5
+[State 620, hit]
+type = HitDef
+trigger1 = Time = 5
+attr = A, NA
+hitflag = MAF
+ guardflag = H
+animtype = Hard
+damage = 95,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = High
+ground.slidetime = 12
+ground.hittime = 24
+ground.velocity = -5, 0
+air.velocity = -3,-4
+fall = 0
+getpower = 35,10
+givepower = 20,10
+[State 620, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 50
+ctrl = 1
+
+
+[Statedef 110]
+type = A
+movetype = I
+physics = N
+anim = 110
+ctrl = 0
+[State 110, once]
+type = VarSet
+trigger1 = Time = 0
+v = 0
+value = 1
+[State 110, velocity]
+type = VelSet
+trigger1 = Time = 0
+x = ifelse(command = "holdback", -4.5, 6)
+y = 0
+[State 110, recover]
+type = ChangeState
+trigger1 = Time >= 14
+value = 50
+ctrl = 1
+[Statedef 1000]
+type = S
+movetype = A
+physics = S
+anim = 1000
+ctrl = 0
+poweradd = 40
+[State 1000, burst]
+type = Projectile
+trigger1 = Time = 10
+projid = 1000
+projanim = 1001
+projhitanim = 1002
+projremanim = 1002
+projremove = 1
+projremovetime = 45
+projhits = 1
+projpriority = 1
+offset = 45,-40
+velocity = 5,0
+attr = S, SP
+damage = 90,12
+animtype = Medium
+hitflag = MAF
+guardflag = MA
+pausetime = 0,9
+sparkno = 2
+sparkxy = 0,0
+ground.type = High
+ground.slidetime = 15
+ground.hittime = 22
+ground.velocity = -5
+air.velocity = -3,-4
+getpower = 50,15
+givepower = 25,10
+[State 1000, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+[Statedef 1100]
+type = S
+movetype = A
+physics = S
+anim = 1100
+ctrl = 0
+poweradd = 25
+[State 1100, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 6
+[State 1100, hit]
+type = HitDef
+trigger1 = Time = 7
+attr = S, NA
+hitflag = MAF
+ guardflag = MA
+animtype = Hard
+damage = 110,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = Trip
+ground.slidetime = 12
+ground.hittime = 24
+ground.velocity = -5, -5
+air.velocity = -3,-4
+fall = 1
+getpower = 35,10
+givepower = 20,10
+[State 1100, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+[Statedef 1200]
+type = S
+movetype = I
+physics = S
+anim = 1200
+ctrl = 0
+[State 1200, shield]
+type = HitOverride
+trigger1 = Time < 12
+attr = SCA, NA, SA, NP, SP
+slot = 0
+stateno = 1210
+time = 1
+[State 1200, recover]
+type = ChangeState
+trigger1 = Time >= 25
+value = 0
+ctrl = 1
+
+
+[Statedef 1210]
+type = S
+movetype = A
+physics = S
+anim = 220
+ctrl = 0
+poweradd = 25
+[State 1210, movement]
+type = VelSet
+trigger1 = Time = 0
+x = 2
+[State 1210, hit]
+type = HitDef
+trigger1 = Time = 2
+attr = S, NA
+hitflag = MAF
+ guardflag = MA
+animtype = Light
+damage = 85,0
+pausetime = 7,7
+sparkno = 2
+sparkxy = 0,-45
+ground.type = High
+ground.slidetime = 12
+ground.hittime = 18
+ground.velocity = -3, 0
+air.velocity = -3,-4
+fall = 0
+getpower = 35,10
+givepower = 20,10
+[State 1210, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+[Statedef 3000]
+type = S
+movetype = A
+physics = S
+anim = 3000
+ctrl = 0
+poweradd = -1000
+[State 3000, freeze]
+type = SuperPause
+trigger1 = Time = 0
+time = 25
+movetime = 25
+anim = -1
+darken = 1
+p2defmul = 1
+[State 3000, text]
+type = Explod
+trigger1 = Time = 0
+anim = 3010
+ID = 3010
+pos = 0,-80
+postype = p1
+bindtime = 1
+removetime = -2
+sprpriority = 5
+ownpal = 1
+[State 3000, launch]
+type = VelSet
+trigger1 = Time = 25
+x = 10
+[State 3000, strike]
+type = HitDef
+trigger1 = Time = 26
+attr = S, HA
+damage = 260,30
+animtype = Hard
+hitflag = MAF
+guardflag = MA
+pausetime = 12,14
+sparkno = 3
+ground.type = High
+ground.slidetime = 25
+ground.hittime = 30
+ground.velocity = -7,-6
+air.velocity = -7,-6
+fall = 1
+getpower = 0,0
+givepower = 40,20
+[State 3000, end]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+[Statedef -2]
+[State -2, reset air dash]
+type = VarSet
+trigger1 = StateType != A
+v = 0
+value = 0
+

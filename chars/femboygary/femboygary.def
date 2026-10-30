@@ -1,0 +1,17 @@
+[Info]
+name = "Femboy Gary"
+displayname = "Femboy Gary"
+versiondate = 10,30,2026
+mugenversion = 1.0
+author = "celerycore"
+localcoord = 320,240
+[Files]
+cmd = femboygary.cmd
+cns = femboygary.cns
+st = femboygary.cns
+stcommon = common1.cns
+sprite = femboygary.sff
+anim = femboygary.air
+[Arcade]
+intro.storyboard =
+ending.storyboard =
